@@ -398,18 +398,47 @@
             }, 500);
         });
 
-        // APK Download Functionality
+        // Referral Tracker
+        const REFERRAL_KEY = 'cromine_referrer';
+        const urlParams = new URLSearchParams(window.location.search);
+        const referrer = urlParams.get('referrer');
+        if (referrer && referrer.startsWith('user_')) {
+            if (!localStorage.getItem(REFERRAL_KEY)) {
+                localStorage.setItem(REFERRAL_KEY, referrer);
+                console.log('Referral saved:', referrer);
+                
+                // Show a thank you message for new referrals
+                const heroContent = document.querySelector('.hero-content');
+                if (heroContent) {
+                    const thankYouMsg = document.createElement('p');
+                    thankYouMsg.textContent = `Thank you for joining via ${referrer}'s referral!`;
+                    thankYouMsg.style.color = '#4CAF50';
+                    thankYouMsg.style.marginTop = '10px';
+                    heroContent.appendChild(thankYouMsg);
+                }
+            }
+        }
+
+        // APK Download with referral tracking
         document.getElementById('downloadBtn').addEventListener('click', () => {
-            const apkUrl = 'https://hakwo65.github.io/crominegames.com/app-release.apk';
+            const apkBaseUrl = 'https://hakwo65.github.io/crominegames.com/app-release.apk';
+            const savedRef = localStorage.getItem(REFERRAL_KEY);
+
+            // Add referral parameter if available
+            const finalUrl = savedRef ? `${apkBaseUrl}?ref=${savedRef}` : apkBaseUrl;
+
             const link = document.createElement('a');
-            link.href = apkUrl;
+            link.href = finalUrl;
             link.download = 'CromineGames.apk';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
             
-            // Optional: Track download event
-            console.log('APK download initiated');
+            // Track download event (you can replace this with actual analytics)
+            console.log('APK download initiated with referral:', savedRef || 'none');
+            
+            // Optional: Show download confirmation
+            alert('Download started! Thank you for installing Cromine Games.');
         });
 
         // Dark/Light Theme Toggle
