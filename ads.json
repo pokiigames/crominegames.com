@@ -3,21 +3,21 @@
     "video_url": "https://hakwo65.github.io/crominegames.com/video.mp4",
     "click_url": "https://hakwo65.github.io/crominegames.com/",
     "active": true,
-    "weight": 4,
+    "weight": 0,
     "max_per_day": 100
   },
   {
     "video_url": "https://hakwo65.github.io/crominegames.com/video1.mp4",
     "click_url": "https://example2.com",
     "active": true,
-    "weight": 2,
+    "weight": 0,
     "max_per_day": 10
   },
   {
     "video_url": "https://hakwo65.github.io/crominegames.com/video2.mp4",
     "click_url": "https://example3.com",
     "active": true,
-    "weight": 4,
+    "weight": 0,
     "max_per_day": 2
   },
   {
@@ -32,7 +32,69 @@
     "click_url": "https://example5.com",
     "active": true,
     "weight": 0
+  },
+  {
+    "video_url": "https://hakwo65.github.io/crominegames.com/video5.mp4",
+    "click_url": "https://example6.com",
+    "active": true,
+    "weight": 0,
+    "max_per_day": 5
+  },
+  {
+    "video_url": "https://hakwo65.github.io/crominegames.com/video6.mp4",
+    "click_url": "https://example7.com",
+    "active": true,
+    "weight": 0
+  },
+  {
+    "video_url": "https://hakwo65.github.io/crominegames.com/video7.mp4",
+    "click_url": "https://example8.com",
+    "active": true,
+    "weight": 0
+  },
+  {
+    "video_url": "https://hakwo65.github.io/crominegames.com/video8.mp4",
+    "click_url": "https://example9.com",
+    "active": true,
+    "weight": 0
+  },
+  {
+    "video_url": "https://hakwo65.github.io/crominegames.com/video9.mp4",
+    "click_url": "https://example10.com",
+    "active": true,
+    "weight": 0
+  },
+  {
+    "video_url": "https://hakwo65.github.io/crominegames.com/video10.mp4",
+    "click_url": "https://example11.com",
+    "active": true,
+    "weight": 0
+  },
+  {
+    "video_url": "https://hakwo65.github.io/crominegames.com/video11.mp4",
+    "click_url": "https://example12.com",
+    "active": true,
+    "weight": 0
+  },
+  {
+    "video_url": "https://hakwo65.github.io/crominegames.com/video12.mp4",
+    "click_url": "https://example13.com",
+    "active": true,
+    "weight": 0
+  },
+  {
+    "video_url": "https://hakwo65.github.io/crominegames.com/video13.mp4",
+    "click_url": "https://example14.com",
+    "active": true,
+    "weight": 0
+  },
+  {
+    "video_url": "https://hakwo65.github.io/crominegames.com/video2.mp4",
+    "click_url": "https://example15.com",
+    "active": true,
+    "weight": 10
   }
 ]
+
 
 
