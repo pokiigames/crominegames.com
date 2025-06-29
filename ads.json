@@ -3,7 +3,7 @@
     "video_url": "https://hakwo65.github.io/crominegames.com/video.mp4",
     "click_url": "https://hakwo65.github.io/crominegames.com/",
     "active": true,
-    "weight": 52,
+    "weight": 1,
     "max_per_day": 100
   },
   {
@@ -86,7 +86,7 @@
     "video_url": "https://hakwo65.github.io/crominegames.com/video3.mp4",
     "click_url": "https://example14.com",
     "active": true,
-    "weight": 20
+    "weight": 1
   },
   {
     "video_url": "https://hakwo65.github.io/crominegames.com/video2.mp4",
