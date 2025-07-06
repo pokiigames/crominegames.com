@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Daily Earn App - Play & Earn ₹50,000 | Free Ludo, Poki Games Online </title>
+    <title>Daily Earn App - Play Ludo & Win ₹50,000 | Free Online Money Games 2024</title>
+    <meta name="description" content="Play free Ludo, Poki games online & earn real cash up to ₹50,000 daily! Instant withdrawal to Paytm, PhonePe. Best money earning game app in 2024.">
+    <meta name="keywords" content="earn money app, free paisa wala game, ludo cash game, poki games online, zuppi ludo, daily earning app, win real money, 50000 kaise kamaye, online money games, best earning game 2024, paytm cash games">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Play & Earn ₹50,000 Daily - Free Ludo Money Game">
+    <meta property="og:description" content="India's #1 real money earning game app. Play Ludo & win cash daily!">
+    <meta property="og:image" content="https://yourwebsite.com/images/earn-money-social-preview.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daily Earn App - Win ₹50,000 Playing Games">
+    <meta name="twitter:description" content="Play Ludo & online games to earn real cash daily!">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "CroomX Games - Earn Money App",
+      "description": "Play games and earn real money daily",
+      "operatingSystem": "Android",
+      "applicationCategory": "GameApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+    
     <style>
-        <img src="applogo.png">
         /* CSS Reset & Base Styles */
         * {
             margin: 0;
@@ -21,6 +61,7 @@
             background-color: #121212;
             color: #fff;
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
         /* Preloader */
@@ -85,14 +126,6 @@
             color: #4CAF50;
         }
 
-        .theme-toggle {
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -101,6 +134,7 @@
             padding: 0 5%;
             position: relative;
             overflow: hidden;
+            padding-top: 80px;
         }
 
         .hero::before {
@@ -119,37 +153,54 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #4CAF50, #2E7D32);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            line-height: 1.2;
+        }
+
+        .hero .highlight {
+            color: #4CAF50;
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 2rem;
             opacity: 0.9;
         }
 
-        .download-btn {
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .download-btn, .referral-btn {
             display: inline-block;
-            padding: 15px 30px;
-            background: #4CAF50;
-            color: white;
-            border: none;
+            padding: 12px 25px;
             border-radius: 50px;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .download-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
             box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
         }
 
-        .download-btn:hover {
+        .referral-btn {
+            background: transparent;
+            color: #4CAF50;
+            border: 2px solid #4CAF50;
+        }
+
+        .download-btn:hover, .referral-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
         }
 
         .hero-image {
@@ -157,11 +208,6 @@
             right: 5%;
             max-width: 40%;
             animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
         }
 
         /* Features Section */
@@ -172,14 +218,13 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 3rem;
-            color: #4CAF50;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
@@ -187,19 +232,57 @@
             background: #252525;
             padding: 2rem;
             border-radius: 10px;
-            text-align: center;
             transition: transform 0.3s;
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .feature-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             color: #4CAF50;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 5%;
+            background: #121212;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #1E1E1E;
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 4rem;
+            color: #4CAF50;
+            opacity: 0.2;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            color: #4CAF50;
+            font-weight: 600;
         }
 
         /* Footer */
@@ -214,15 +297,12 @@
             justify-content: center;
             gap: 2rem;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
             color: #fff;
             text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            color: #4CAF50;
         }
 
         .social-links {
@@ -245,7 +325,7 @@
         /* Responsive Design */
         @media (max-width: 992px) {
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             .hero-image {
                 max-width: 50%;
@@ -269,48 +349,18 @@
                 right: auto;
                 max-width: 80%;
             }
+            .cta-buttons {
+                justify-content: center;
+            }
         }
 
         @media (max-width: 576px) {
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
-            .download-btn {
-                padding: 12px 25px;
+            .section-title {
+                font-size: 1.8rem;
             }
-        }
-
-        /* Dark/Light Theme */
-        body.light-mode {
-            background: #f5f5f5;
-            color: #333;
-        }
-
-        body.light-mode header {
-            background: rgba(245, 245, 245, 0.9);
-        }
-
-        body.light-mode .hero::before {
-            background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, rgba(245, 245, 245, 1) 70%);
-        }
-
-        body.light-mode .features {
-            background: #e0e0e0;
-        }
-
-        body.light-mode .feature-card {
-            background: #fff;
-            color: #333;
-        }
-
-        body.light-mode footer {
-            background: #ddd;
-            color: #333;
-        }
-
-        body.light-mode .footer-links a,
-        body.light-mode .social-links a {
-            color: #333;
         }
     </style>
 </head>
@@ -326,59 +376,100 @@
         <nav class="nav-links">
             <a href="#home">Home</a>
             <a href="#features">Features</a>
+            <a href="#testimonials">Winners</a>
             <a href="#download">Download</a>
-            <a href="#contact">Contact</a>
         </nav>
-        <button class="theme-toggle" id="themeToggle">
-            <i class="fas fa-moon"></i>
-        </button>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Welcome to CroomX Games</h1>
-            <p>Experience the ultimate gaming adventure with our latest mobile game. Stunning graphics, smooth gameplay, and endless fun!. Earn ₹5 per refferal</p>
-            <button class="download-btn" id="downloadBtn">Download APK Now</button>
+            <h1>Earn <span class="highlight">₹50,000 Daily</span> Playing Ludo & Online Games</h1>
+            <p>Join India's #1 real money earning game app. Play simple games and withdraw cash directly to your Paytm, PhonePe or Bank Account.</p>
+            <div class="cta-buttons">
+                <a href="#download" class="download-btn">Download Now</a>
+                <a href="#" class="referral-btn">Earn ₹5 Per Referral</a>
+            </div>
         </div>
-        <img src="applogo.png" alt="Cromine Game Screenshot" class="hero-image">
+        <img src="app-screenshot.png" alt="CroomX Games App Screenshot" class="hero-image">
     </section>
 
     <!-- Features Section -->
     <section class="features" id="features">
-        <h2 class="section-title">Why Choose CroomX?</h2>
+        <h2 class="section-title">Why Players Love <span class="highlight">CroomX</span></h2>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">
-                    <i class="fas fa-gamepad"></i>
+                    <i class="fas fa-rupee-sign"></i>
                 </div>
-                <h3>Engaging Gameplay</h3>
-                <p>Hours of fun with intuitive controls and exciting challenges.</p>
+                <h3>Real Cash Rewards</h3>
+                <p>Earn money for every game you play. Withdraw anytime via UPI or bank transfer.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <i class="fas fa-paint-brush"></i>
+                    <i class="fas fa-bolt"></i>
                 </div>
-                <h3>Stunning Graphics</h3>
-                <p>High-quality visuals optimized for all devices.</p>
+                <h3>Instant Withdrawal</h3>
+                <p>Get your earnings in minutes with our lightning-fast payment system.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <i class="fas fa-sync-alt"></i>
+                    <i class="fas fa-users"></i>
                 </div>
-                <h3>Regular Updates</h3>
-                <p>New levels and features added frequently.</p>
+                <h3>Referral Bonus</h3>
+                <p>Earn ₹5 for every friend who joins through your referral link.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">Our <span class="highlight">Winners</span></h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"I earned ₹25,000 in my first month just by playing Ludo in my free time. This app changed my life!"</p>
+                <p class="testimonial-author">- Ravi K., Mumbai</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Withdrawals are instant! I got ₹3,200 credited to my Paytm within 5 minutes of requesting."</p>
+                <p class="testimonial-author">- Priya S., Delhi</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Best money earning game I've found. Made ₹5,000 from referrals alone last week."</p>
+                <p class="testimonial-author">- Amit P., Bangalore</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="features" id="download" style="background: #121212;">
+        <h2 class="section-title">Start <span class="highlight">Earning</span> Today</h2>
+        <div class="features-grid">
+            <div class="feature-card" style="text-align: center;">
+                <div class="feature-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <h3>Download Now</h3>
+                <p>Get the APK file and start playing within minutes</p>
+                <a href="app-release.apk" download class="download-btn" style="display: inline-block; margin-top: 15px;">Download APK</a>
+            </div>
+            <div class="feature-card" style="text-align: center;">
+                <div class="feature-icon">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <h3>Scan to Download</h3>
+                <img src="qr-code.png" alt="Download QR Code" style="max-width: 150px; margin: 10px auto; display: block;">
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Support</a>
-            <a href="#">FAQ</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
         </div>
         <div class="social-links">
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -386,7 +477,7 @@
             <a href="https://www.instagram.com/crom_x_official/"><i class="fab fa-instagram"></i></a>
             <a href="https://www.youtube.com/@CroomX-t7w"><i class="fab fa-youtube"></i></a>
         </div>
-        <p class="copyright">© 2023 CroomX Games. All Rights Reserved.</p>
+        <p class="copyright">© 2024 CroomX Games. All Rights Reserved.</p>
     </footer>
 
     <!-- JavaScript -->
@@ -399,67 +490,53 @@
             }, 500);
         });
 
-        // Referral Tracker
-        const REFERRAL_KEY = 'cromine_referrer';
-        const urlParams = new URLSearchParams(window.location.search);
-        const referrer = urlParams.get('referrer');
-        if (referrer && referrer.startsWith('user_')) {
-            if (!localStorage.getItem(REFERRAL_KEY)) {
-                localStorage.setItem(REFERRAL_KEY, referrer);
-                console.log('Referral saved:', referrer);
+        // Referral System
+        const setupReferralSystem = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const refCode = urlParams.get('ref');
+            
+            if (refCode && refCode.length >= 5) {
+                localStorage.setItem('userReferral', refCode);
                 
-                // Show a thank you message for new referrals
-                const heroContent = document.querySelector('.hero-content');
-                if (heroContent) {
-                    const thankYouMsg = document.createElement('p');
-                    thankYouMsg.textContent = `Thank you for joining via ${referrer}'s referral!`;
-                    thankYouMsg.style.color = '#4CAF50';
-                    thankYouMsg.style.marginTop = '10px';
-                    heroContent.appendChild(thankYouMsg);
+                // Show referral success message
+                const hero = document.querySelector('.hero-content');
+                if (hero) {
+                    const refMessage = document.createElement('p');
+                    refMessage.innerHTML = `✅ Joined via referral code: <strong>${refCode}</strong>`;
+                    refMessage.style.color = '#4CAF50';
+                    refMessage.style.marginTop = '10px';
+                    hero.appendChild(refMessage);
                 }
             }
+        };
+
+        // Generate referral link
+        document.querySelector('.referral-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const userId = localStorage.getItem('userId') || generateUserId();
+            const refLink = `${window.location.origin}?ref=${userId}`;
+            
+            prompt('Copy your referral link and share with friends:', refLink);
+        });
+
+        function generateUserId() {
+            const id = 'user_' + Math.random().toString(36).substr(2, 8);
+            localStorage.setItem('userId', id);
+            return id;
         }
 
-        // APK Download with referral tracking
-        document.getElementById('downloadBtn').addEventListener('click', () => {
-            const apkBaseUrl = 'https://hakwo65.github.io/crominegames.com/app-release.apk';
-            const savedRef = localStorage.getItem(REFERRAL_KEY);
-
-            // Add referral parameter if available
-            const finalUrl = savedRef ? `${apkBaseUrl}?ref=${savedRef}` : apkBaseUrl;
-
-            const link = document.createElement('a');
-            link.href = finalUrl;
-            link.download = 'CromineGames.apk';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            setupReferralSystem();
             
-            // Track download event (you can replace this with actual analytics)
-            console.log('APK download initiated with referral:', savedRef || 'none');
-            
-            // Optional: Show download confirmation
-            alert('Download started! Thank you for installing Cromine Games.');
-        });
-
-        // Dark/Light Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            
-            if (document.body.classList.contains('light-mode')) {
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            } else {
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            }
-        });
-
-        // Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+            // Track downloads
+            document.querySelectorAll('.download-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const refCode = localStorage.getItem('userReferral');
+                    if (refCode) {
+                        console.log(`Download initiated with referral: ${refCode}`);
+                        // Here you would send this to your analytics
+                    }
                 });
             });
         });
