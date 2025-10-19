@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - [Your App Name]</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .last-updated {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        h2:first-child {
+            margin-top: 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .privacy-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .privacy-section h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .privacy-button {
+            display: inline-block;
+            background: white;
+            color: #f5576c;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .privacy-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-section {
+            background-color: #e8f4fc;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .contact-email {
+            display: inline-block;
+            background: #2575fc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+        
+        .highlight {
+            background-color: #fff9e6;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .content-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Terms and Conditions</h1>
+            <p>Please read these terms carefully before using our application</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="last-updated">
+            <strong>Last updated:</strong> October 2025
+        </div>
+        
+        <div class="content-card">
+            <h2>1. Use of the App</h2>
+            <p>Our app provides:</p>
+            <ul>
+                <li>Two games: Tic Tac Toe (online & offline) and 2048</li>
+                <li>A task-based reward system where users can complete daily tasks by watching rewarded ads to earn points</li>
+                <li>A leaderboard showing the top 50 players based on points</li>
+            </ul>
+            <p>The app is for entertainment purposes only. You agree to use the app in compliance with all applicable laws.</p>
+            
+            <h2>2. User Account and Sign-In</h2>
+            <ul>
+                <li>Users can sign in using Google Sign-In</li>
+                <li>We collect only basic profile data: your name, email address, profile photo, and in-app score</li>
+                <li>This data is securely stored using Google Firebase and is used only to maintain your account, leaderboard ranking, and gameplay history</li>
+                <li>We do not sell, share, or misuse your data</li>
+            </ul>
+            
+            <div class="highlight">
+                <strong>For more details on how we collect, use, and protect your data, please read our Privacy Policy.</strong>
+            </div>
+            
+            <h2>3. User Responsibilities and Conduct</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the app for any illegal or unauthorized purpose</li>
+                <li>Attempt to hack, cheat, or manipulate the leaderboard scores</li>
+                <li>Use any automated system (like bots or scripts) to complete tasks or earn points</li>
+                <li>Upload or share any harmful or abusive content</li>
+            </ul>
+            <p>We reserve the right to ban any user who violates these rules and remove their scores from the leaderboard.</p>
+            
+            <h2>4. Reward System</h2>
+            <ul>
+                <li>Users can earn points by completing tasks such as watching rewarded ads</li>
+                <li>Points have no real-world monetary value unless explicitly stated in the app</li>
+                <li>We reserve the right to modify or remove the reward system at any time</li>
+            </ul>
+            
+            <h2>5. Advertisements</h2>
+            <p>Our app displays ads through Google AdMob. Ads help us maintain and improve our services. By using the app, you agree to view these advertisements as part of your experience.</p>
+            
+            <h2>6. Intellectual Property</h2>
+            <p>All game content, graphics, logos, and features within the app are owned by or licensed to us. You may not copy, modify, distribute, or use our content without permission.</p>
+            
+            <h2>7. Disclaimer and Limitation of Liability</h2>
+            <ul>
+                <li>The app and its services are provided on an "as is" and "as available" basis. We do not guarantee that the app will be uninterrupted, error-free, or free from harmful components</li>
+                <li>We are not responsible for any direct or indirect loss arising from the use of the app, including technical errors, ad availability, or reward issues</li>
+            </ul>
+            
+            <h2>8. Termination</h2>
+            <p>We may, at our sole discretion, suspend or terminate your access to the app and leaderboard if you violate these Terms and Conditions.</p>
+            
+            <h2>9. Changes to Terms</h2>
+            <p>We reserve the right to modify or update these Terms and Conditions at any time. Changes will be effective immediately upon posting in the app or website. Continued use of the app after changes means you accept the updated terms.</p>
+            
+            <h2>10. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of India.</p>
+            
+            <div class="privacy-section">
+                <h3>Privacy Policy</h3>
+                <p>Learn how we collect, use, and protect your personal information</p>
+                <a href="#" class="privacy-button">View Privacy Policy</a>
+            </div>
+            
+            <div class="contact-section">
+                <h2>11. Contact Us</h2>
+                <p>If you have any questions or concerns regarding these Terms, you can contact us at:</p>
+                <a href="mailto:support@yourapp.com" class="contact-email">📧 support@yourapp.com</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 [Your App Name]. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple script to handle the Privacy Policy button click
+        document.querySelector('.privacy-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('In a real implementation, this would navigate to your Privacy Policy page.\n\nFor now, please create a separate Privacy Policy page and update this link.');
+        });
+        
+        // Update year in footer
+        document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} [Your App Name]. All rights reserved.`;
+    </script>
+</body>
+</html>
