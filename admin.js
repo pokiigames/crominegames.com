@@ -1,12 +1,23 @@
 // Initialize Firebase app
 if (!firebaseConfig || !firebaseConfig.apiKey || firebaseConfig.apiKey === "REPLACE_ME") {
+  console.error("Firebase config not set!");
   document.getElementById("not-configured").classList.remove("hidden");
 } else {
-  firebase.initializeApp(firebaseConfig);
+  try {
+    firebase.initializeApp(firebaseConfig);
+    console.log("Firebase initialized successfully");
+  } catch (e) {
+    console.error("Error initializing Firebase:", e);
+    document.getElementById("not-configured").classList.remove("hidden");
+  }
 }
 
 const auth = firebase.apps.length ? firebase.auth() : null;
 const db = firebase.apps.length ? firebase.firestore() : null;
+
+if (!auth || !db) {
+  console.error("Firebase Auth or Firestore not available!");
+}
 
 const googleBtn = document.getElementById("google-sign-in-btn");
 const loginCard = document.getElementById("login-card");
@@ -59,22 +70,35 @@ function setAdminUI(email) {
 }
 
 async function checkIsAdmin(user) {
-  if (!db) return false;
-  if (!user || !user.email) return false;
+  if (!db) {
+    console.error("Firestore not initialized");
+    return false;
+  }
+  if (!user || !user.email) {
+    console.error("No user or email found");
+    return false;
+  }
 
   try {
+    console.log("Checking admin status for:", user.email);
     const docRef = db.collection("admins").doc("admin_emails");
     const snap = await docRef.get();
     if (!snap.exists) {
-      // No admin document yet: treat as no admins; you can create it manually in console.
+      console.warn("Admin document does not exist. Create it in Firestore: collection 'admins', document 'admin_emails', field 'emails' (array of email strings).");
       return false;
     }
     const data = snap.data() || {};
     const emails = Array.isArray(data.emails) ? data.emails : [];
+    console.log("Admin emails from Firestore:", emails);
     adminEmailsCache = emails;
-    return emails.includes(user.email);
+    const isAdmin = emails.includes(user.email);
+    console.log(`User ${user.email} is admin:`, isAdmin);
+    return isAdmin;
   } catch (e) {
     console.error("Error checking admin status:", e);
+    if (e.code === 'permission-denied') {
+      console.error("Permission denied. Check Firestore security rules allow reading admins/admin_emails.");
+    }
     return false;
   }
 }
@@ -263,11 +287,26 @@ async function saveAdminEmails(emails) {
 if (auth && db) {
   googleBtn.addEventListener("click", async () => {
     try {
+      console.log("Starting Google Sign-In...");
       const provider = new firebase.auth.GoogleAuthProvider();
-      await auth.signInWithPopup(provider);
+      provider.addScope('email');
+      provider.addScope('profile');
+      
+      const result = await auth.signInWithPopup(provider);
+      console.log("Sign-in successful:", result.user.email);
     } catch (e) {
       console.error("Error during sign-in:", e);
-      alert("Sign-in failed. Check console for details.");
+      let errorMsg = "Sign-in failed. ";
+      if (e.code === 'auth/popup-closed-by-user') {
+        errorMsg += "Popup was closed.";
+      } else if (e.code === 'auth/popup-blocked') {
+        errorMsg += "Popup was blocked. Please allow popups for this site.";
+      } else if (e.code === 'auth/unauthorized-domain') {
+        errorMsg += "This domain is not authorized. Add it in Firebase Console → Authentication → Settings → Authorized domains.";
+      } else {
+        errorMsg += `Error: ${e.message || e.code || 'Unknown error'}`;
+      }
+      alert(errorMsg);
     }
   });
 
@@ -323,17 +362,21 @@ if (auth && db) {
 
   // Auth state listener
   auth.onAuthStateChanged(async (user) => {
+    console.log("Auth state changed. User:", user ? user.email : "null");
     if (!user) {
       setLoggedOutUI();
       return;
     }
 
+    console.log("Checking if user is admin...");
     const isAdmin = await checkIsAdmin(user);
     if (!isAdmin) {
+      console.log("User is not admin. Showing access denied message.");
       setNotAdminUI(user.email || "");
       return;
     }
 
+    console.log("User is admin. Showing admin panel.");
     setAdminUI(user.email || "");
 
     // Load data once admin confirmed
