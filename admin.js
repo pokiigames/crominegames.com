@@ -1,5 +1,5 @@
 // Initialize Firebase app
-if (!firebaseConfig || !firebaseConfig.apiKey || firebaseConfig.apiKey === "REPLACE_ME") {
+if (!firebaseConfig || !firebaseConfig.apiKey || firebaseConfig.apiKey === "AIzaSyBlmpJONrCu6wgsveViQAn52XI8SXIXPkU") {
   console.error("Firebase config not set!");
   document.getElementById("not-configured").classList.remove("hidden");
 } else {
